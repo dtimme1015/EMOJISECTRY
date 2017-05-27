@@ -1,26 +1,89 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EMOJISECTRY" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ugc-2c-WEg">
+                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ugc-2c-WEg" secondAttribute="height" multiplier="207:358" id="pe6-Ux-OMz"/>
+                                </constraints>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ugc-2c-WEg" secondAttribute="bottom" id="Iga-HT-7Rb"/>
+                            <constraint firstItem="ugc-2c-WEg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="JH4-jm-vGi"/>
+                            <constraint firstAttribute="trailing" secondItem="ugc-2c-WEg" secondAttribute="trailing" id="pND-Jh-ZLG"/>
+                            <constraint firstItem="ugc-2c-WEg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uNW-D7-LCx"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="Onesietableview" destination="ugc-2c-WEg" id="oOG-hq-YCR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="9" y="104"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Mpz-Q1-H2b">
+            <objects>
+                <viewController id="V0o-hb-7jP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cmg-Sy-vPt"/>
+                        <viewControllerLayoutGuide type="bottom" id="dbm-dy-5Lu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qfk-Ww-wAl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⛪️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3s-Mj-Sa8">
+                                <rect key="frame" x="104" y="60" width="207" height="227"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="190"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a church" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4c-ZC-bre">
+                                <rect key="frame" x="147" y="337" width="120" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="d3s-Mj-Sa8" firstAttribute="centerX" secondItem="qfk-Ww-wAl" secondAttribute="centerX" id="96N-UQ-9hB"/>
+                            <constraint firstItem="d3s-Mj-Sa8" firstAttribute="top" secondItem="cmg-Sy-vPt" secondAttribute="bottom" constant="40" id="I4W-Rs-7Ay"/>
+                            <constraint firstItem="M4c-ZC-bre" firstAttribute="top" secondItem="d3s-Mj-Sa8" secondAttribute="bottom" constant="50" id="N6z-G1-Lzr"/>
+                            <constraint firstItem="M4c-ZC-bre" firstAttribute="centerX" secondItem="qfk-Ww-wAl" secondAttribute="centerX" id="NuP-QK-tJx"/>
+                            <constraint firstItem="d3s-Mj-Sa8" firstAttribute="centerX" secondItem="qfk-Ww-wAl" secondAttribute="centerX" id="acJ-OL-n1D"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G1D-Aw-Div" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="681" y="104"/>
         </scene>
     </scenes>
 </document>
